@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd" version="2.0">
+	<portlet>
+		<portlet-name>1</portlet-name>
+		<display-name>Multi Categories Navigation</display-name>
+		<portlet-class>it.tref.liferay.multi.portlet.CategoriesNavigationPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/multi_categories/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/multi_categories/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Multi Categories Navigation</title>
+			<short-title></short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>categoryId</supported-public-render-parameter>
+		<supported-public-render-parameter>resetCur</supported-public-render-parameter>
+	</portlet>
+	<portlet>
+		<portlet-name>2</portlet-name>
+		<display-name>Multi Tags Navigation</display-name>
+		<portlet-class>it.tref.liferay.multi.portlet.TagsNavigationPortlet</portlet-class>
+		<init-param>
+			<name>view-template</name>
+			<value>/html/multi_tags/view.jsp</value>
+		</init-param>
+		<init-param>
+			<name>config-template</name>
+			<value>/html/multi_tags/configuration.jsp</value>
+		</init-param>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>view</portlet-mode>
+		</supports>
+		<resource-bundle>content.Language</resource-bundle>
+		<portlet-info>
+			<title>Multi Tags Navigation</title>
+			<short-title></short-title>
+			<keywords></keywords>
+		</portlet-info>
+		<security-role-ref>
+			<role-name>administrator</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>guest</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>power-user</role-name>
+		</security-role-ref>
+		<security-role-ref>
+			<role-name>user</role-name>
+		</security-role-ref>
+		<supported-public-render-parameter>tag</supported-public-render-parameter>
+		<supported-public-render-parameter>resetCur</supported-public-render-parameter>
+	</portlet>
+	<public-render-parameter>
+		<identifier>categoryId</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:categoryId</qname>
+	</public-render-parameter>
+	<public-render-parameter>
+		<identifier>resetCur</identifier>
+		<qname xmlns:w="http://www.liferay.com/public-render-parameters">w:resetCur</qname>
+	</public-render-parameter>
+	<public-render-parameter>
+		<identifier>tag</identifier>
+		<qname xmlns:x="http://www.liferay.com/public-render-parameters">x:tag</qname>
+	</public-render-parameter>
+</portlet-app>
